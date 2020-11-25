@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3c4890d1-5003-41f7-8cc6-9fafc479d289" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kSRenCQEpiP5V0GEwySaLAAo4A" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Craft\Documents\web\ChromeExtension\assets\conf" />
+      <recent name="C:\Users\Craft\Documents\web\ChromeExtension\assets\img" />
+      <recent name="C:\Users\Craft\Documents\web\ChromeExtension\assets\css" />
+      <recent name="C:\Users\Craft\Documents\web\ChromeExtension\assets\js" />
+      <recent name="C:\Users\Craft\Documents\web\ChromeExtension\assets" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Craft\Documents\web\ChromeExtension\assets\img" />
+      <recent name="C:\Users\Craft\Documents\web\ChromeExtension\assets" />
+      <recent name="C:\Users\Craft\Documents\web\ChromeExtension" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3c4890d1-5003-41f7-8cc6-9fafc479d289" name="Default Changelist" comment="" />
+      <created>1605692103234</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605692103234</updated>
+      <workItem from="1605692104294" duration="9913000" />
+      <workItem from="1606167428283" duration="3131000" />
+      <workItem from="1606227097002" duration="8219000" />
+      <workItem from="1606237510718" duration="12536000" />
+      <workItem from="1606307296446" duration="18560000" />
+      <workItem from="1606330340514" duration="57000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="725" y="310" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605693550700">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="725" y="310" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605693550700" />
+    <state x="739" y="225" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1605694407011">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="739" y="225" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605694407011" />
+    <state x="734" y="459" key="#com.intellij.ide.util.TreeDirectoryChooserDialog" timestamp="1606251474333">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="734" y="459" key="#com.intellij.ide.util.TreeDirectoryChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606251474333" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606236003007">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606236003007" />
+    <state x="627" y="298" key="EditFileWatcherDialog" timestamp="1605695242489">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="627" y="298" key="EditFileWatcherDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605695242489" />
+    <state x="739" y="275" key="FileChooserDialogImpl" timestamp="1605694403526">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="739" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1605694403526" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1605695244305">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605695244305" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606328872589">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606328872589" />
+  </component>
+</project>
