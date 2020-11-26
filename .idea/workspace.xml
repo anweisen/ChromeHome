@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c4890d1-5003-41f7-8cc6-9fafc479d289" name="Default Changelist" comment="" />
+    <list default="true" id="3c4890d1-5003-41f7-8cc6-9fafc479d289" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ChromeExtension.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aws.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/options.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/options.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/github.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/github.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/options.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/options.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/options.html" beforeDir="false" afterPath="$PROJECT_DIR$/options.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,10 +48,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1kSRenCQEpiP5V0GEwySaLAAo4A" />
   <component name="ProjectViewState">
@@ -26,7 +66,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/lib" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -40,6 +80,8 @@
       <recent name="C:\Users\Craft\Documents\web\ChromeExtension\assets" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Craft\Documents\web\ChromeHome\assets\lib" />
+      <recent name="C:\Users\Craft\Documents\web\ChromeHome" />
       <recent name="C:\Users\Craft\Documents\web\ChromeExtension\assets\img" />
       <recent name="C:\Users\Craft\Documents\web\ChromeExtension\assets" />
       <recent name="C:\Users\Craft\Documents\web\ChromeExtension" />
@@ -58,18 +100,32 @@
       <workItem from="1606227097002" duration="8219000" />
       <workItem from="1606237510718" duration="12536000" />
       <workItem from="1606307296446" duration="18560000" />
-      <workItem from="1606330340514" duration="57000" />
+      <workItem from="1606330340514" duration="12682000" />
+      <workItem from="1606395233869" duration="7621000" />
+      <workItem from="1606402910929" duration="5745000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="725" y="310" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605693550700">
+    <state x="725" y="310" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606338214546">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="725" y="310" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1605693550700" />
+    <state x="725" y="310" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1606338214546" />
     <state x="739" y="225" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1605694407011">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -78,10 +134,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="734" y="459" key="#com.intellij.ide.util.TreeDirectoryChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606251474333" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606236003007">
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606399876770">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606236003007" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606399876770" />
     <state x="627" y="298" key="EditFileWatcherDialog" timestamp="1605695242489">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -94,6 +150,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605695244305" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1606399970080">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606399970080" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606328872589">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
