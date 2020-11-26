@@ -13,7 +13,10 @@ let user;
 let commitsToday = 0;
 
 async function countEvents(page) {
+
 	const events = await fetchEvents(page);
+	if (!events) return
+
 	for (let event of events) {
 
 		const eventDateString = event.created_at;
@@ -59,10 +62,15 @@ async function get(url) {
 
 async function refreshGit() {
 	await loadCredentials(async () => {
-		await fetchStats();
 		const element = document.getElementById("commit-info");
-		element.innerHTML = message(commitsToday);
-		element.href = `https://github.com/${user}`;
+		if (user) {
+			await fetchStats();
+			element.innerHTML = message(commitsToday);
+			element.href = `https://github.com/${user}`;
+		} else {
+			element.href = "#";
+			element.parentElement.style.display = "none";
+		}
 	});
 }
 
