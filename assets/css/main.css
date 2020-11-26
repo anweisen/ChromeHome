@@ -11,6 +11,12 @@ a {
 a:hover {
 	color: #b7b7b7;
 }
+body {
+	overflow: hidden;
+}
+p {
+	display: inline-flex;
+}
 .background {
 	background: radial-gradient(ellipse at bottom, #1d2939 0%, #161724 100%) no-repeat fixed;
 }
