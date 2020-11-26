@@ -10,57 +10,73 @@ function save() {
 	const name = document.getElementById("greeting-name").value;
 	const githubName = document.getElementById("github-name").value;
 	const token = document.getElementById("github-token").value;
+	const auth = document.getElementById("upload-auth").value;
+	const route = document.getElementById("upload-route").value;
+	const proxy = document.getElementById("upload-proxy").value;
+
+	console.log(name.length)
+	if (name.length === 0) {
+		callback("failed settings");
+		visualFeedback(true, "failing");
+		setTimeout(function() {
+			visualFeedback(false, "failing");
+			inSaving = false;
+		}, 1750);
+		return;
+	}
 
 	callback("saving settings");
 
 	chrome.storage.sync.set({
 		name: name,
 		githubName: githubName,
-		githubToken: token
+		githubToken: token,
+		uploadAuth: auth,
+		uploadProxy: proxy,
+		uploadRoute: route
 	}, function() {
 		callback("saved settings");
-		visualFeedback(true);
+		visualFeedback(true, "saving");
 		setTimeout(function() {
-			visualFeedback(false);
+			visualFeedback(false, "saving");
 			inSaving = false;
-		}, 1300);
+		}, 1750);
 	});
 }
 
 function load() {
 
-	chrome.storage.sync.get(["name", "githubName", "githubToken"], data => {
+	chrome.storage.sync.get(["name", "githubName", "githubToken", "uploadAuth", "uploadProxy", "uploadRoute"], data => {
 		document.getElementById("greeting-name").value = data.name || "";
 		document.getElementById("github-name").value = data.githubName || "";
 		document.getElementById("github-token").value = data.githubToken || "";
+		document.getElementById("upload-route").value = data.uploadRoute || "";
+		document.getElementById("upload-proxy").value = data.uploadProxy || "";
+		document.getElementById("upload-auth").value = data.uploadAuth || "";
 		callback("settings loaded");
 	});
 
 }
-
-function visualFeedback(save) {
+function visualFeedback(save, state) {
 
 	const bars = document.getElementsByClassName("bar");
 
 	if (save) {
 		for (let bar of bars) {
-			bar.classList.add("saving");
+			bar.classList.add(state);
 		}
 	} else {
 		for (let bar of bars) {
-			bar.classList.remove("saving");
+			bar.classList.remove(state);
 		}
 	}
 
 }
 
-
 load();
-for (let element of document.getElementsByClassName("form-field")) {
-	element.addEventListener("keyup", event => {
-		if (event.keyCode !== 13) return;
-		event.preventDefault();
-		save();
-	});
-}
+window.addEventListener("keyup", event => {
+	if (event.keyCode !== 13) return;
+	event.preventDefault();
+	save();
+});
 
