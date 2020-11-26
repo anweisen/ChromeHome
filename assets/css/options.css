@@ -11,14 +11,6 @@
 	--group-color-focus: #fff;
 	--group-border-focus: var(--input-border-focus);
 	--group-background-focus: #678EFE;
-	--active: #275EFE;
-	--active-inner: #fff;
-	--focus: 2px rgba(39, 94, 254, .3);
-	--border: #BBC1E1;
-	--border-hover: #275EFE;
-	--background: #fff;
-	--disabled: #F6F8FF;
-	--disabled-inner: #E1E6F9;
 }
 
 .form-field {
@@ -159,7 +151,7 @@ body .form-group:not(:last-child) {
 	padding-bottom: 40px;
 }
 .bar {
-	transition: all 0.65s;
+	transition: all 0.8s;
 	width: 30px;
 }
 .bar1 {
@@ -171,6 +163,9 @@ body .form-group:not(:last-child) {
 .bar1.saving {
 	background: #1b581b right top;
 }
+.bar1.failing {
+	background: #72040c right top;
+}
 .bar2 {
 	background: white left bottom;
 	height: 160px;
@@ -178,4 +173,7 @@ body .form-group:not(:last-child) {
 }
 .bar2.saving {
 	background: #328a32 right top;
+}
+.bar2.failing {
+	background: #c61e30 right top;
 }
