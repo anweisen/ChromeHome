@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" style="background: #161724;">
+<html lang="en" style="background: #161724">
 	<head>
 		<title>New Tab</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<script src="https://kit.fontawesome.com/5034b24144.js"></script>
 		<link rel="stylesheet" href="assets/css/main.css">
 		<link rel="stylesheet" href="assets/css/home.css">
 		<script src="assets/js/utils.js"></script>
@@ -18,20 +19,30 @@
 	<body class="loader-1 loading"
 	      style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select: none; user-select: none; -o-user-select: none;"
 	      unselectable="on"
-	      onmousedown="return false">
+	      id="drop-area">
+
+		<div class="file-upload">
+
+		</div>
 
 		<div class="container">
+
 			<div id="particles-js" class="background"></div>
-			<div class="text loader-2 loading" id="content">
+
+			<div id="main-content" class="text loader-2 loading">
+
 				<section class="greeting-container">
 					<p id="greeting">hello</p>
 					<p id="segue">, </p>
-					<p id="name">angelo</p>
+					<p id="name"></p>
 				</section>
+
 				<section class="today-commit-container loader-20 loading">
 					<a id="commit-info" href="#"></a>
 				</section>
+
 				<hr class="loader-2 loading">
+
 				<section id="clock" class="loader-15 loading">
 					<p class="clock-component" id="clock-day"></p>
 					<p class="clock-component clock-date-segue">, </p>
@@ -41,12 +52,23 @@
 					<p class="clock-component clock-segue">:</p>
 					<p class="clock-component" id="clock-second"></p>
 				</section>
+
 			</div>
+
+			<div id="upload-content" class="text">
+				<a id="uploaded-file-anchor" href="#">
+					<i class="fas fa-upload"></i>
+					<p id="uploaded-file-status-prefix">Uploaded</p>
+					<p id="uploaded-file-name"></p>
+				</a>
+			</div>
+
 		</div>
 
 		<!-- Starting particle system & loading assets -->
 		<script src="assets/js/particles.js"></script>
 		<script src="assets/js/loader.js"></script>
+		<script src="assets/js/fileUploader.js"></script>
 
 	</body>
 </html>
