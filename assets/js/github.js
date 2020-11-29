@@ -22,8 +22,10 @@ async function countEvents(page) {
 		const eventDateString = event.created_at;
 		const eventDate = new Date(eventDateString);
 
+		const payload = event.payload.commits;
+
 		if (isToday(eventDate)) {
-			commitsToday++;
+			commitsToday += payload.length;
 		} else {
 			// Leaving loop, the event time line is sorted by the date
 			// If a event is not from today, the events after that cannot be from today
@@ -79,12 +81,15 @@ function message(commits) {
 		return "you didn't commit today";
 	} else if (commits <= 2) {
 		// 1 - 2
-		return `well, you did ${commits} today`;
+		return `well, ${commits} ${commitWord(commits)} today`;
 	} else if (commits <= 5) {
 		// 2 - 5
-		return `${commits} excellent commits today`;
+		return `${commits} excellent ${commitWord(commits)} today`;
 	} else {
 		// 10 or more
-		return `${commits} productive commits today`;
+		return `${commits} productive ${commitWord(commits)} today`;
 	}
+}
+function commitWord(number) {
+	return number === 1 ? "commit" : "commits";
 }
