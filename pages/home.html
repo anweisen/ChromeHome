@@ -5,11 +5,11 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<script src="https://kit.fontawesome.com/5034b24144.js"></script>
-		<link rel="stylesheet" href="assets/css/main.css">
-		<link rel="stylesheet" href="assets/css/home.css">
-		<script src="assets/js/utils.js"></script>
-		<script src="assets/js/timeManager.js"></script>
-		<script src="assets/js/github.js"></script>
+		<link rel="stylesheet" href="../assets/css/main.css">
+		<link rel="stylesheet" href="../assets/css/home.css">
+		<script src="../assets/js/utils.js"></script>
+		<script src="../assets/js/timeManager.js"></script>
+		<script src="../assets/js/github.js"></script>
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;600&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
@@ -21,9 +21,7 @@
 	      unselectable="on"
 	      id="drop-area">
 
-		<div class="file-upload">
-
-		</div>
+		<div class="file-upload"></div>
 
 		<div class="container">
 
@@ -55,6 +53,7 @@
 
 			</div>
 
+			<!-- Popups -->
 			<div id="upload-content" class="text">
 				<a id="uploaded-file-anchor" href="#">
 					<i class="fas fa-upload"></i>
@@ -62,13 +61,26 @@
 					<p id="uploaded-file-name"></p>
 				</a>
 			</div>
+			<div id="shortener-content" class="text displayed">
+				<div class="input-container">
+
+				</div>
+			</div>
+
+			<!-- Navbar in bottom left corner -->
+			<div id="nav-content" class="text loader-3 loading">
+				<button id="shortener-button">
+					<i class="fas fa-link fa-2x"></i>
+				</button>
+			</div>
 
 		</div>
 
 		<!-- Starting particle system & loading assets -->
-		<script src="assets/js/particles.js"></script>
-		<script src="assets/js/loader.js"></script>
-		<script src="assets/js/fileUploader.js"></script>
+		<script src="../assets/js/particles.js"></script>
+		<script src="../assets/js/loader.js"></script>
+		<script src="../assets/js/fileUploader.js"></script>
+		<script src="../assets/js/shortener.js"></script>
 
 	</body>
 </html>

@@ -6,12 +6,12 @@
   "permissions": ["activeTab", "declarativeContent", "storage", "tabs", "http://localhost:3000/upload", "http://coding-area.net:3000/upload"],
   "content_security_policy": "script-src 'self' https://kit.fontawesome.com/5034b24144.js; object-src 'self'",
   "chrome_url_overrides" : {
-	"newtab": "home.html"
+	"newtab": "pages/home.html"
   },
   "page_action": {
-    "default_popup": "options.html"
+    "default_popup": "pages/options.html"
   },
-  "options_page": "options.html",
+  "options_page": "pages/options.html",
   "icons": {
     "64": "/assets/img/icon.png"
   },
