@@ -1,5 +1,5 @@
 
-particlesJS.load("particles-js", "assets/conf/particle.conf.json", function() {
+particlesJS.load("particles-js", "../assets/conf/particle.conf.json", function() {
 	callback("particles.js config loaded");
 });
 
@@ -40,13 +40,14 @@ function format(number) {
 }
 function updateTime() {
 	const date = new Date();
-	document.getElementById("clock-day").innerHTML = currentDay();
+	document.getElementById("clock-day").innerHTML = currentDay(date);
 	document.getElementById("clock-hour").innerHTML = format(date.getHours());
 	document.getElementById("clock-minute").innerHTML = format(date.getMinutes());
 	document.getElementById("clock-second").innerHTML = format(date.getSeconds());
 }
 setInterval(updateTime, 100);
 updateTime();
+
 
 setInterval(refreshGit, 30*1000);
 refreshGit();

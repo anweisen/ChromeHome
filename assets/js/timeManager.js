@@ -46,8 +46,8 @@ function currentGreeting() {
 	}
 }
 
-function currentDay() {
-	switch (new Date().getDay()) {
+function currentDay(date) {
+	switch (date.getDay()) {
 		case 1:
 			return "monday";
 		case 2:
@@ -61,6 +61,7 @@ function currentDay() {
 		case 6:
 			return "saturday";
 		case 7:
+		case 0: // sunday is 0 not 7!
 			return "sunday";
 	}
 }
