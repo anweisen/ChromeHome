@@ -17,6 +17,16 @@ body {
 p {
 	display: inline-flex;
 }
+button {
+	transition: transform 0.3s;
+	border: none;
+	outline: none;
+	background: transparent;
+}
+button:hover {
+	transform: scale(1.3);
+}
+
 .background {
 	background: radial-gradient(ellipse at bottom, #1d2939 0%, #161724 100%) no-repeat fixed;
 }
