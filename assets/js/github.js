@@ -24,7 +24,10 @@ async function countEvents(page) {
 
 		const payload = event.payload.commits;
 
-		if (isToday(eventDate)) {
+		if (!payload) {
+			// Leaving loop, payload is undefined
+			break;
+		} else if (isToday(eventDate)) {
 			commitsToday += payload.length;
 		} else {
 			// Leaving loop, the event time line is sorted by the date
