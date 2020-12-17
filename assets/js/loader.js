@@ -35,8 +35,15 @@ function updateJoke() {
 
 	request.send();
 }
-setInterval(updateJoke, 60*1000);
-updateJoke();
+
+chrome.storage.sync.get("jokes", data => {
+	if (data.jokes == "Enabled") {
+		setInterval(updateJoke, 60*1000);
+		updateJoke();
+	} else {
+		document.getElementById("joke-content").classList.add("hidden");
+	}
+});
 
 function load(id) {
 	const elements = document.getElementsByClassName("loader-" + id);

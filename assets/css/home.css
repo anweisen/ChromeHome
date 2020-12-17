@@ -125,3 +125,7 @@ i {
 	opacity: 100;
 	font-size: 0;
 }
+
+#content-content.hidden {
+	display: none;
+}

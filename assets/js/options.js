@@ -13,6 +13,7 @@ function save() {
 	const auth = document.getElementById("upload-auth").value;
 	const route = document.getElementById("upload-route").value;
 	const proxy = document.getElementById("upload-proxy").value;
+	const jokes = document.getElementById("jokes").textContent;
 
 	console.log(name.length)
 	if (name.length === 0) {
@@ -33,7 +34,8 @@ function save() {
 		githubToken: token,
 		uploadAuth: auth,
 		uploadProxy: proxy,
-		uploadRoute: route
+		uploadRoute: route,
+		jokes: jokes
 	}, function() {
 		callback("saved settings");
 		visualFeedback(true, "saving");
@@ -46,13 +48,14 @@ function save() {
 
 function load() {
 
-	chrome.storage.sync.get(["name", "githubName", "githubToken", "uploadAuth", "uploadProxy", "uploadRoute"], data => {
+	chrome.storage.sync.get(["name", "githubName", "githubToken", "uploadAuth", "uploadProxy", "uploadRoute", "jokes"], data => {
 		document.getElementById("greeting-name").value = data.name || "";
 		document.getElementById("github-name").value = data.githubName || "";
 		document.getElementById("github-token").value = data.githubToken || "";
 		document.getElementById("upload-route").value = data.uploadRoute || "";
 		document.getElementById("upload-proxy").value = data.uploadProxy || "";
 		document.getElementById("upload-auth").value = data.uploadAuth || "";
+		document.getElementById("jokes").textContent = data.jokes || "Disabled";
 		callback("settings loaded");
 	});
 
@@ -80,3 +83,20 @@ window.addEventListener("keyup", event => {
 	save();
 });
 
+for (var item of document.getElementsByClassName('form-bool')) {
+	if (item.textContent == "Enabled") {
+		item.classList.add("triggered");
+	}
+	item.addEventListener("click", event => {
+		if (item.textContent == "Enabled") {
+			item.textContent = "Disabled";
+			item.classList.remove("triggered");
+		} else if (item.textContent == "Disabled"){
+			item.textContent = "Enabled";
+			item.classList.add("triggered");
+		} else {
+			item.textContent = "Disabled";
+		}
+		save();
+	});
+}
