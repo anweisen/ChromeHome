@@ -3,6 +3,10 @@ particlesJS.load("particles-js", "../assets/conf/particle.conf.json", function()
 	callback("particles.js config loaded");
 });
 
+if (new Date(Date.now()).getMonth() + 1 == 12) { //Dates start from zero
+	loadChristmas();
+}
+
 function loadName() {
 	chrome.storage.sync.get("name", data => {
 		document.getElementById("name").innerHTML = data.name;
