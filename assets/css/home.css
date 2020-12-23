@@ -1,4 +1,8 @@
 
+#content {
+	height: 100vh;
+}
+
 .loading {
 	opacity: 0;
 }
@@ -13,6 +17,7 @@
 	color: #fff;
 	max-width: 90%;
 	padding: 2em 3em;
+
 	font-family: 'Source Code Pro', monospace;
 	font-weight: 300;
 	font-size: 30px;
@@ -50,6 +55,9 @@ body.loading #particles-js canvas {
 #segue {
 	padding-right: 6px;
 }
+#greeting-emoji {
+	padding-left: 10px;
+}
 
 hr.loading {
 	opacity: 100;
@@ -86,32 +94,41 @@ hr {
 	transition: all 0.25s;
 	padding-top: 3px;
 	font-weight: 300;
-	font-size: 20px;
+	font-size: 19px;
 	display: inherit;
 }
 .today-commit-container.loading {
 	font-size: 0;
 }
-i {
 
+#popups ul {
+	position: absolute;
 }
-#upload-content {
-	transition: all 0.75s;
+.popup {
+	position: absolute;
+	transition: top 0.75s;
 	max-width: 80%;
 	border-radius: 40px;
 	padding: 20px 30px;
 	background: #0a9637;
 	font-size: 20px;
-	display: inline-flex;
+	display: inline-block;
 	/* before transition */
 	top: 150%;
 }
-#upload-content.displayed {
+.popup.displayed {
+	transition: top 0.75s;
 	top: 90%;
 }
-#uploaded-file-anchor {
+.upload-anchor {
 	transition: color 0.3s;
 }
-#uploaded-file-anchor:hover {
+.upload-anchor:hover {
 	color: #bebebe;
+}
+
+#nav-content {
+	transition: all 1s;
+	top: 95%;
+	right: 98%;
 }
