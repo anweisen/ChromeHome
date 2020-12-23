@@ -1,10 +1,4 @@
 
-function minutesOfDay() {
-	const date = new Date();
-	const hours = date.getHours();
-	return hours * 60 + date.getMinutes();
-}
-
 function hourOfDay() {
 	return new Date().getHours();
 }
