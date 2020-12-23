@@ -1,11 +1,13 @@
 
-particlesJS.load("particles-js", "../assets/conf/particle.conf.json", function() {
-	callback("particles.js config loaded");
-});
-
-if (new Date(Date.now()).getMonth() + 1 == 12) { //Dates start from zero
-	loadChristmas();
+try {
+	particlesJS.load("particles-js", "../assets/conf/particle.conf.json", function() {
+		callback("particles.js config loaded");
+	});
+} catch (err) {
+	// Check if particle.js was loaded
 }
+
+loadWinter();
 
 function loadName() {
 	chrome.storage.sync.get("name", data => {
@@ -15,12 +17,20 @@ function loadName() {
 loadName();
 
 function updateGreeting() {
+
 	const greeting = currentGreeting();
 	document.getElementById("greeting").innerHTML = greeting;
 	callback(`changed greeting to '${greeting}'`);
+
+
+
 }
 setInterval(updateGreeting, 60*1000);
 updateGreeting();
+
+
+loadWinter();
+
 
 function load(id) {
 	const elements = document.getElementsByClassName("loader-" + id);
@@ -48,6 +58,7 @@ function updateTime() {
 	document.getElementById("clock-hour").innerHTML = format(date.getHours());
 	document.getElementById("clock-minute").innerHTML = format(date.getMinutes());
 	document.getElementById("clock-second").innerHTML = format(date.getSeconds());
+	document.getElementById("clock-day-of-month").innerHTML = date.getDate() + "";
 }
 setInterval(updateTime, 100);
 updateTime();
