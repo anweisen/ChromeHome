@@ -15,32 +15,33 @@ let commitsToday = 0;
 async function countEvents(page) {
 
 	const events = await fetchEvents(page);
-	if (!events) return
+	if (!events) return;
 
 	for (let event of events) {
 
-		const eventDateString = event.created_at;
-		const eventDate = new Date(eventDateString);
-
-		const payload = event.payload.commits;
-
-		if (!payload) {
-			// Leaving loop, payload is undefined
-			break;
-		} else if (isToday(eventDate)) {
-			commitsToday += payload.length;
-		} else {
+		const eventDate = new Date(event.created_at);
+		if (!isToday(eventDate)) {
 			// Leaving loop, the event time line is sorted by the date
 			// If a event is not from today, the events after that cannot be from today
 			break;
 		}
+
+		const payload = event.payload.commits;
+		if (!payload) {
+			// Leaving loop, there is no payload
+			break;
+		}
+
+		commitsToday += payload.length;
+
 	}
+
 }
 async function fetchStats() {
 
 	commitsToday = 0;
-
 	let page = 1;
+
 	while (true) {
 		let before = commitsToday;
 		await countEvents(page);
@@ -73,6 +74,7 @@ async function refreshGit() {
 			element.innerHTML = message(commitsToday);
 			element.href = `https://github.com/${user}`;
 		} else {
+			// Hiding info if no data about github was given
 			element.href = "#";
 			element.parentElement.style.display = "none";
 		}
@@ -86,10 +88,10 @@ function message(commits) {
 		// 1 - 2
 		return `well, ${commits} ${commitWord(commits)} today`;
 	} else if (commits <= 5) {
-		// 2 - 5
+		// 3 - 5
 		return `${commits} excellent ${commitWord(commits)} today`;
 	} else {
-		// 10 or more
+		// 6 or more
 		return `${commits} productive ${commitWord(commits)} today`;
 	}
 }
