@@ -4,10 +4,11 @@ function createPopup(name, text, url) {
 	callback(`creating popup "${name}" with text=${text} url=${url}`);
 
 	const template = document.getElementById("templates").getElementsByClassName(name)[0];
-	if (!template) return warn(`no such template "${name}"`);
+	if (!template) return warn(`no such popup template "${name}"`);
+	if (template.tagName !== "DIV") warn(`the popup template ${name} is invalid`);
 
 	const container = document.getElementById("popup-content");
-	const popupExists = container.childElementCount > 0;
+
 	removeCurrentPopup();
 
 	const clone = container.appendChild(template.cloneNode(true));
@@ -16,7 +17,7 @@ function createPopup(name, text, url) {
 	// Fading in after 25ms / 1s
 	setTimeout(() => {
 		clone.classList.add("displayed");
-	}, popupExists ? 1000 : 25);
+	}, 25);
 
 	// Fading out after 7500ms
 	setTimeout(() => {
@@ -31,8 +32,9 @@ function deletePopup(popup) {
 	callback(`deleting popup`);
 
 	// Instant fading out
+	console.log(removeClass(popup, "displayed"));
+
 	// Removing after 2.5s
-	console.log(removeClassList(popup, "displayed"));
 	setTimeout(() => {
 		removeElement(popup);
 	}, 2500);
@@ -42,9 +44,13 @@ function deletePopup(popup) {
 function removeCurrentPopup() {
 
 	const container = document.getElementById("popup-content");
+	for (let popup of container.children) {
 
-	const popup = container.firstChild;
-	deletePopup(popup);
+		if (popup.tagName === "DIV") {
+			deletePopup(popup);
+		}
+
+	}
 
 }
 

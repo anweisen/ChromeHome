@@ -43,11 +43,12 @@ function removeElement(element) {
 		return false;
 	}
 }
-function removeClassList(element, classname) {
+function removeClass(element, classname) {
 	try {
 		element.classList.remove(classname);
 		return true;
 	} catch (err) {
+		console.log(err);
 		return false;
 	}
 }
