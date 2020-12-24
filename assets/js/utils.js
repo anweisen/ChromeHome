@@ -48,7 +48,6 @@ function removeClass(element, classname) {
 		element.classList.remove(classname);
 		return true;
 	} catch (err) {
-		console.log(err);
 		return false;
 	}
 }
