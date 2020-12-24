@@ -14,10 +14,10 @@ function createPopup(name, text, url) {
 	const clone = container.appendChild(template.cloneNode(true));
 	setAttributes(clone, text, url);
 
-	// Fading in after 25ms / 1s
+	// Fading in after 1ms to prevent instant appearing
 	setTimeout(() => {
 		clone.classList.add("displayed");
-	}, 25);
+	}, 1);
 
 	// Fading out after 7500ms
 	setTimeout(() => {
@@ -32,7 +32,7 @@ function deletePopup(popup) {
 	callback(`deleting popup`);
 
 	// Instant fading out
-	console.log(removeClass(popup, "displayed"));
+	removeClass(popup, "displayed");
 
 	// Removing after 2.5s
 	setTimeout(() => {
