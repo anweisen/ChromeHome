@@ -17,7 +17,6 @@
 	color: #fff;
 	max-width: 90%;
 	padding: 2em 3em;
-
 	font-family: 'Source Code Pro', monospace;
 	font-weight: 300;
 	font-size: 30px;
@@ -82,8 +81,6 @@ hr {
 }
 .clock-date-segue {
 	padding-right: 8px;
-	text-align: center;
-	width: 100%;
 }
 .clock-segue {
 	padding-left: 2px;
