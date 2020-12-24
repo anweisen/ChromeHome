@@ -29,6 +29,8 @@ dropArea.addEventListener('drop', (event) => {
 
 function handleFile(file) {
 
+	callback(`uploading file '${file.name}'`);
+
 	const formData = new FormData();
 	formData.append("file", file);
 
@@ -54,25 +56,6 @@ function handleFile(file) {
 	});
 }
 
-let displays = 0;
 function display(path, filename) {
-
-	displays++;
-	const container = document.getElementById("upload-content");
-	const anchor = document.getElementById("uploaded-file-anchor");
-	const name = document.getElementById("uploaded-file-name");
-
-	anchor.href = path;
-	name.textContent = filename
-
-	const tag = "displayed";
-	container.classList.add(tag);
-
-	setTimeout(() => {
-		displays--;
-		if (displays <= 0) {
-			container.classList.remove(tag);
-		}
-	}, 7500);
-
+	createPopup("upload-popup", [filename], [path]);
 }
