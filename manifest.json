@@ -1,17 +1,18 @@
 {
   "name": "Home Screen",
   "version": "1.0",
-  "description": "follow me on https://github.com/anweisen",
+  "description": "Contribute at https://github.com/anweisen/ChromeHome",
   "author": "anweisen",
+  "homepage_url": "https://github.com/anweisen/ChromeHome",
   "permissions": ["activeTab", "declarativeContent", "storage", "tabs", "http://localhost:3000/upload", "http://coding-area.net:3000/upload", "https://icanhazdadjoke.com/"],
   "content_security_policy": "script-src 'self' https://kit.fontawesome.com/5034b24144.js; object-src 'self'",
   "chrome_url_overrides" : {
 	"newtab": "pages/home.html"
   },
   "page_action": {
-    "default_popup": "pages/options.html"
+    "default_popup": "/pages/options.html"
   },
-  "options_page": "pages/options.html",
+  "options_page": "/pages/options.html",
   "icons": {
     "64": "/assets/img/icon.png"
   },

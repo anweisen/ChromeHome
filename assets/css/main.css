@@ -4,18 +4,22 @@
 	padding: 0;
 }
 a {
-	transition: color 0.2s;
+	transition: color 0.25s;
 	text-decoration: none;
 	color: inherit;
 }
 a:hover {
-	color: #b7b7b7;
+	color: #c6c6c6;
 }
 body {
 	overflow: hidden;
+	height: 100vh;
 }
 p {
 	display: inline-flex;
+}
+i {
+	color: #dddd;
 }
 button {
 	transition: transform 0.3s;
@@ -29,4 +33,6 @@ button:hover {
 
 .background {
 	background: radial-gradient(ellipse at bottom, #1d2939 0%, #161724 100%) no-repeat fixed;
+	height: 100vh;
+	width: 100vw;
 }
