@@ -124,6 +124,19 @@ hr {
 	color: #bebebe;
 }
 
+#joke-content {
+	transition: all 0.7s;
+	display: inline-flex;
+	font-size: 20px;
+}
+#joke-content.loading {
+	opacity: 100;
+	font-size: 0;
+}
+
+#content-content.hidden {
+	display: none;
+}
 #nav-content {
 	transition: all 1s;
 	top: 95%;

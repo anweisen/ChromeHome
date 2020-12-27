@@ -28,9 +28,30 @@ function updateGreeting() {
 setInterval(updateGreeting, 60*1000);
 updateGreeting();
 
+function updateJoke() {
+	request = new XMLHttpRequest()
+	request.open("GET", "https://icanhazdadjoke.com")
+	request.setRequestHeader("Accept", "application/json")
+
+	request.onload = function() {
+		joke = JSON.parse(request.responseText).joke;
+		document.getElementById("joke").innerHTML = joke;
+		callback(`changed joke to '${joke}'`);
+	};
+
+	request.send();
+}
+
+chrome.storage.sync.get("jokes", data => {
+	if (data.jokes == "Enabled") {
+		setInterval(updateJoke, 60*1000);
+		updateJoke();
+	} else {
+		document.getElementById("joke-content").classList.add("hidden");
+	}
+});
 
 loadWinter();
-
 
 function load(id) {
 	const elements = document.getElementsByClassName("loader-" + id);

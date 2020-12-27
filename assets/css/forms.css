@@ -101,6 +101,12 @@
 	border-color: var(--group-border-focus);
 }
 
+.form-bool.triggered {
+	transition: 0.5s;
+	background-color: green;
+	border: none;
+}
+
 html {
 	box-sizing: border-box;
 	-webkit-font-smoothing: antialiased;
@@ -139,4 +145,3 @@ body .form-group:not(:last-child) {
 .form-value {
 	font-family: 'Source Code Pro', monospace;
 }
-
