@@ -4,18 +4,14 @@ let inSaving = false;
 
 function save() {
 
-	if (inSaving) return;
-	inSaving = true;
-
 	const name = document.getElementById("greeting-name").value;
 	const githubName = document.getElementById("github-name").value;
 	const token = document.getElementById("github-token").value;
 	const auth = document.getElementById("upload-auth").value;
 	const route = document.getElementById("upload-route").value;
 	const proxy = document.getElementById("upload-proxy").value;
-	const jokes = document.getElementById("jokes").textContent;
+	const jokes = document.getElementById("jokes").textContent === "Enabled";
 
-	console.log(name.length)
 	if (name.length === 0) {
 		callback("failed settings");
 		visualFeedback(true, "failing");
@@ -38,11 +34,16 @@ function save() {
 		jokes: jokes
 	}, function() {
 		callback("saved settings");
+
+		// Only play animation if no animation is playing
+		if (inSaving) return;
+		inSaving = true;
 		visualFeedback(true, "saving");
 		setTimeout(function() {
 			visualFeedback(false, "saving");
 			inSaving = false;
 		}, 1750);
+
 	});
 }
 
@@ -55,7 +56,8 @@ function load() {
 		document.getElementById("upload-route").value = data.uploadRoute || "";
 		document.getElementById("upload-proxy").value = data.uploadProxy || "";
 		document.getElementById("upload-auth").value = data.uploadAuth || "";
-		document.getElementById("jokes").textContent = data.jokes || "Disabled";
+		document.getElementById("jokes").textContent = data.jokes ? "Enabled" : "Disabled";
+		if (data.jokes) document.getElementById("jokes").classList.add("triggered");
 		callback("settings loaded");
 	});
 
@@ -83,19 +85,17 @@ window.addEventListener("keyup", event => {
 	save();
 });
 
-for (var item of document.getElementsByClassName('form-bool')) {
-	if (item.textContent == "Enabled") {
+for (const item of document.getElementsByClassName('form-bool')) {
+	if (item.textContent === "Enabled") {
 		item.classList.add("triggered");
 	}
 	item.addEventListener("click", event => {
-		if (item.textContent == "Enabled") {
+		if (item.textContent === "Enabled") {
 			item.textContent = "Disabled";
 			item.classList.remove("triggered");
-		} else if (item.textContent == "Disabled"){
+		} else {
 			item.textContent = "Enabled";
 			item.classList.add("triggered");
-		} else {
-			item.textContent = "Disabled";
 		}
 		save();
 	});
