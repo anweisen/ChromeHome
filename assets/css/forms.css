@@ -1,5 +1,7 @@
 :root {
 	--input-color: #99A3BA;
+	--dark-input-color: #5a5a5a;
+	--light-input-color: #fef;
 	--input-border: #CDD9ED;
 	--input-background: #fff;
 	--input-placeholder: #CBD1DC;
@@ -101,9 +103,18 @@
 	border-color: var(--group-border-focus);
 }
 
+.form-bool {
+	transition: color, background-color 0.5s;
+	user-select: none;
+}
+.form-bool:not(.triggered) {
+	color: var(--dark-input-color);
+	background-color: #ec7676;
+	border: none;
+}
 .form-bool.triggered {
-	transition: 0.5s;
-	background-color: green;
+	color: var(--light-input-color);
+	background-color: #06ec73;
 	border: none;
 }
 
@@ -135,10 +146,10 @@ body {
 	flex-direction: column;
 	background: #F5F9FF;
 }
-body .form-group {
+body.form-group {
 	max-width: 360px;
 }
-body .form-group:not(:last-child) {
+body.form-group:not(:last-child) {
 	margin-bottom: 32px;
 }
 
