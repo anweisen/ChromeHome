@@ -22,6 +22,7 @@ function closeCurrentTab(callback) {
 function createNewTab(callback) {
 	chrome.tabs.create(null, callback);
 }
+
 function randomLetters(length) {
 
 	const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -35,6 +36,10 @@ function randomLetters(length) {
 
 }
 
+function formatNumber(number) {
+	return number >= 10 ? "" + number : "0" + number;
+}
+
 function removeElement(element) {
 	try {
 		element.remove();
@@ -43,6 +48,7 @@ function removeElement(element) {
 		return false;
 	}
 }
+
 function removeClass(element, classname) {
 	try {
 		element.classList.remove(classname);
